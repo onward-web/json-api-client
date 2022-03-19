@@ -187,10 +187,10 @@ class DocumentParser implements DocumentParserInterface
             ->concat($document->getIncluded());
 
         $duplicateItems = $this->getDuplicateItems($allItems);
-
+        /*
         if ($duplicateItems->isNotEmpty()) {
             throw new ValidationException(sprintf('Resources MUST be unique based on their `type` and `id`, %d duplicate(s) found.', $duplicateItems->count()));
-        }
+        }*/
 
         $this->linkRelationships($allItems);
 
